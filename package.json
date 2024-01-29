@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "lint": "stylelint scss/",
+    "theme:assets": "cross-env cp -r assets/* dist/",
     "theme:icons": "cross-env cp -r node_modules/bootstrap-icons/font/fonts dist/",
     "theme:default": "sass --load-path=node_modules/ scss/default/app.scss dist/default.css",
     "theme:yz": "sass --load-path=node_modules/ scss/yz/app.scss dist/yz.css",
     "theme:cdk": "sass --load-path=node_modules/ scss/cdk/app.scss dist/cdk.css && cross-env cp -r scss/cdk/fonts/* dist/fonts/",
-    "build": "cross-env rm -rf dist && cross-env mkdir dist && npm run theme:icons && npm run theme:default && npm run theme:yz && npm run theme:cdk",
+    "build": "cross-env rm -rf dist && cross-env mkdir dist && npm run theme:assets && npm run theme:icons && npm run theme:default && npm run theme:yz && npm run theme:cdk",
     "test": "npm run lint"
   },
   "repository": {
