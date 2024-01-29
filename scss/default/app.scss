@@ -1,0 +1,12 @@
+@import "../overrides";
+
+$dark-theme: false;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$form-check-input-checked-bg-color: $red;
+
+@import "bootstrap/scss/bootstrap";
+
+@import "../common";

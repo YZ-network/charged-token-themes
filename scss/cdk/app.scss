@@ -1,0 +1,37 @@
+@import "../overrides";
+
+$dark-theme: true;
+
+$primary: #fe6f03;
+
+$body-bg: #e7f4fd;
+$card-bg: $body-bg;
+$modal-content-bg: #020936;
+$modal-content-color: $body-bg;
+
+@font-face {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  src: url("./fonts/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  src: url("./fonts/GOTHICB.TTF");
+}
+
+$font-family-base: "Century Gothic";
+
+@import "bootstrap/scss/bootstrap";
+
+@import "../common";
+
+.card {
+  border-color: rgba($modal-content-bg, .7);
+}
+
+nav.bg-primary {
+  background-color: #fff;
+  background-image: linear-gradient(to right, #f00, #fe6e04) !important;
+}

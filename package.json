@@ -1,0 +1,40 @@
+{
+  "name": "charged-token-themes",
+  "version": "1.0.0",
+  "description": "Bootstrap themes library to be used by the Charged Token dApp",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint scss/",
+    "theme:icons": "cross-env cp -r node_modules/bootstrap-icons/font/fonts dist/",
+    "theme:default": "sass --load-path=node_modules/ scss/default/app.scss dist/default.css",
+    "theme:yz": "sass --load-path=node_modules/ scss/yz/app.scss dist/yz.css",
+    "theme:cdk": "sass --load-path=node_modules/ scss/cdk/app.scss dist/cdk.css && cross-env cp -r scss/cdk/fonts/* dist/fonts/",
+    "build": "cross-env rm -rf dist && cross-env mkdir dist && npm run theme:icons && npm run theme:default && npm run theme:yz && npm run theme:cdk",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YZ-network/charged-token-themes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YZ-network/charged-token-themes/issues"
+  },
+  "homepage": "https://github.com/YZ-network/charged-token-themes#readme",
+  "dependencies": {
+    "bootstrap": "=5.2.3",
+    "bootstrap-icons": "=1.10.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "postcss": "=8.3.9",
+    "postcss-cli": "=9.0.1",
+    "purgecss": "=4.0.3",
+    "sass": "=1.56.2",
+    "stylelint": "=14.16.0",
+    "stylelint-config-prettier": "=9.0.4",
+    "stylelint-config-standard": "=29.0.0",
+    "stylelint-config-twbs-bootstrap": "=7.0.0"
+  }
+}

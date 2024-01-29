@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "declaration-no-important": null,
+    "selector-no-qualifying-type": null
+  },
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-twbs-bootstrap"
+  ]
+}

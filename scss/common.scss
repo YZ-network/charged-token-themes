@@ -1,0 +1,60 @@
+@import "bootstrap-icons/font/bootstrap-icons";
+@import "common/react-datetime";
+
+body {
+  height: 100vh;
+}
+
+.root {
+  min-height: 100%;
+}
+
+.fullpage {
+  min-height: 100vh;
+}
+
+.fullpage form {
+  min-width: 40%;
+}
+
+.fullpage .input-group {
+  width: auto;
+}
+
+.card-header,
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
+
+.tooltip-inner {
+  max-width: 100%;
+}
+
+.anchor-bottom {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+}
+
+.toast-overlay {
+  z-index: 1040;
+}
+
+.logo {
+  // width: 2rem;
+  height: 2rem;
+}
+
+.footer-brand {
+  font-size: medium;
+}
+
+.footer-brand img {
+  width: 20.63px;
+  height: 24px;
+}

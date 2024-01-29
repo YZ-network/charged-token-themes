@@ -1,0 +1,6 @@
+**/*.TTF
+**/*.min.css
+**/*.css
+dist/
+node_modules
+react-datetime.scss
