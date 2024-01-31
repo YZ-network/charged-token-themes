@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Themes demo</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+
+        <button
+          aria-controls="navbar-content"
+          type="button"
+          aria-label="Toggle navigation"
+          class="navbar-toggler collapsed"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbar-content">
+          <div class="me-auto navbar-nav">
+            <a class="nav-link" href="#">Home</a>
+          </div>
+          <div class="navbar-nav">
+            Select a theme&nbsp;
+            <select id="theme-switcher"></select>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="ps-5 pe-5 pb-5 pt-5 row container-fluid text-center">
+      <h1 class="mb-4 col-12">Buttons</h1>
+      <div class="col-12">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+    </div>
+
+    <div class="ps-5 pe-5 pb-5 container-fluid">
+      <div class="gy-4 text-center row">
+        <div class="mt-4 row">
+          <h1 class="mb-4 col-12"><b>Project token cards</b></h1>
+          <div
+            class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
+          >
+            <div class="mb-4 card ct-card" style="cursor: pointer">
+              <img class="card-img-top" style="width: 100%; height: 150px" />
+              <div class="p-4 liquid-token-card-body card-body">
+                <div class="align-items-center row">
+                  <h4 class="text-center mb-3 col-12">
+                    <div><b>Seed</b></div>
+                    <div>
+                      (Post-TGE)<button
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                      >
+                        <i class="bi bi-clipboard"></i>
+                      </button>
+                    </div>
+                  </h4>
+                  <div class="col-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Staked</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Fully charged</th>
+                          <td>0 ctXYZ</td>
+                        </tr>
+                        <tr>
+                          <th>Partially charged</th>
+                          <td>0 ctXYZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Wallet</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="1">0 XYZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
+          >
+            <div class="mb-4 card ct-card" style="cursor: pointer">
+              <img class="card-img-top" style="width: 100%; height: 150px" />
+              <div class="p-4 liquid-token-card-body card-body">
+                <div class="align-items-center row">
+                  <h4 class="text-center mb-3 col-12">
+                    <div><b>Private sale</b></div>
+                    <div>
+                      (Post-TGE)<button
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                      >
+                        <i class="bi bi-clipboard"></i>
+                      </button>
+                    </div>
+                  </h4>
+                  <div class="col-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Staked</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Fully charged</th>
+                          <td>0 ctXYZ</td>
+                        </tr>
+                        <tr>
+                          <th>Partially charged</th>
+                          <td>0 ctXYZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Wallet</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="1">0 XYZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
+          >
+            <div class="mb-4 card ct-card" style="cursor: pointer">
+              <img class="card-img-top" style="width: 100%; height: 150px" />
+              <div class="p-4 liquid-token-card-body card-body">
+                <div class="align-items-center row">
+                  <h4 class="text-center mb-3 col-12">
+                    <div><b>Public sale</b></div>
+                    <div>
+                      (Pre-TGE)<button
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                      >
+                        <i class="bi bi-clipboard"></i>
+                      </button>
+                    </div>
+                  </h4>
+                  <div class="col-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Staked</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Fully charged</th>
+                          <td>0 ctXYZ</td>
+                        </tr>
+                        <tr>
+                          <th>Partially charged</th>
+                          <td>0 ctXYZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Wallet</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="1">0 XYZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./themes-config.js"></script>
+    <script src="./theme-switcher.js"></script>
+  </body>
+</html>
