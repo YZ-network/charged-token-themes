@@ -21,14 +21,6 @@ function getThemeId() {
   return entry.dir || entry.name;
 }
 
-function getThemeThumbnails() {
-  const entry = getThemeEntry();
-
-  if (!entry || entry.thumbnails !== true) return "default";
-
-  return entry.name;
-}
-
 function getThemeBrand() {
   const entry = getThemeEntry();
 
@@ -95,11 +87,6 @@ function applyTheme(theme) {
   $(".navbar-brand").append(
     `<img src="../dist/brand/${getThemeBrand()}.png" alt="Brand" class="logo" />`
   );
-
-  console.log("Updating thumbnails");
-
-  const thumbnail = getThemeThumbnails();
-  $(".card-img-top").attr("src", `../dist/thumbnails/${thumbnail}.jpg`);
 
   console.log("Theme applied !");
 }

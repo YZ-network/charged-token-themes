@@ -50,6 +50,11 @@ body {
   height: 2rem;
 }
 
+.thumbnail {
+  height: 150px;
+  object-fit: cover;
+}
+
 .footer-brand {
   font-size: medium;
 }
