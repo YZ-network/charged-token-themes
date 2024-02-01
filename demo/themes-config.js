@@ -27,7 +27,9 @@ const THEMES = [
     hostname: "claim.cdktoken.io",
     uri: "https://cdktoken.io",
     title: "CDK Token",
+    project: "CDK",
     brand: true,
     favicon: true,
+    thumbnails: true,
   },
 ];
