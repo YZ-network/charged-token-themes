@@ -91,8 +91,8 @@ function applyTheme(theme) {
   $("nav.navbar").removeClass(["navbar-light", "navbar-dark"]);
   $("nav.navbar").addClass(isThemeDark() ? "navbar-dark" : "navbar-light");
 
-  $(".navbar-brand").empty();
-  $(".navbar-brand").append(
+  $(".navbar-brand.top").empty();
+  $(".navbar-brand.top").append(
     `<img src="../dist/brand/${getThemeBrand()}.png" alt="Brand" class="logo" />`
   );
 

@@ -7,12 +7,12 @@
     <title>Themes demo</title>
   </head>
 
-  <body>
+  <body id="root" class="root">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-lg bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand top" href="#"></a>
 
         <button
           aria-controls="navbar-content"
@@ -26,6 +26,78 @@
         <div class="navbar-collapse collapse" id="navbar-content">
           <div class="me-auto navbar-nav">
             <a class="nav-link" href="#">Home</a>
+            <div class="nav-item dropdown">
+              <a
+                id="basic-nav-dropdown"
+                aria-expanded="false"
+                role="button"
+                class="dropdown-toggle nav-link"
+                tabindex="0"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Dropdown menu</a
+              >
+              <div
+                aria-labelledby="basic-nav-dropdown"
+                data-bs-popper="static"
+                class="dropdown-menu dropdown-menu-dark"
+              >
+                <a
+                  type="button"
+                  class="dropdown-item"
+                  role="button"
+                  tabindex="0"
+                  href="#"
+                  >Project A</a
+                ><a
+                  type="button"
+                  class="dropdown-item"
+                  role="button"
+                  tabindex="0"
+                  href="#"
+                  >Project B</a
+                ><a
+                  type="button"
+                  class="dropdown-item"
+                  role="button"
+                  tabindex="0"
+                  href="#"
+                  >Project C</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="me-3 navbar-nav">
+            <div class="form-check form-switch">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                checked=""
+              /><label title="" class="form-check-label">Advanced</label>
+            </div>
+          </div>
+          <div class="navbar-nav me-3">
+            <div class="input-group">
+              <span class="input-group-text"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  height="1em"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"
+                  ></path></svg></span
+              ><input
+                size="9"
+                readonly=""
+                class="form-control"
+                value="0xeDa0...fDCB"
+              /><button type="button" class="btn btn-primary btn-sm">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
           </div>
           <div class="navbar-nav">
             Select a theme&nbsp;
@@ -36,8 +108,8 @@
     </nav>
 
     <div class="ps-5 pe-5 pb-5 pt-5 row container-fluid text-center">
-      <h1 class="mb-4 col-12">Buttons</h1>
-      <div class="col-12">
+      <h1 class="mb-4 col col-12"><b>Buttons</b></h1>
+      <div class="col col-12">
         <button type="button" class="btn btn-primary">Primary</button>
         <button type="button" class="btn btn-secondary">Secondary</button>
         <button type="button" class="btn btn-success">Success</button>
@@ -52,169 +124,167 @@
 
     <div class="ps-5 pe-5 pb-5 container-fluid">
       <div class="gy-4 text-center row">
-        <div class="mt-4 row">
-          <h1 class="mb-4 col-12"><b>Project token cards</b></h1>
-          <div
-            class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
-          >
-            <div class="mb-4 card ct-card" style="cursor: pointer">
-              <img class="card-img-top thumbnail" />
-              <div class="p-4 liquid-token-card-body card-body">
-                <div class="align-items-center row">
-                  <h4 class="text-center mb-3 col-12">
-                    <div><b>Seed</b></div>
-                    <div>
-                      (Post-TGE)<button
-                        type="button"
-                        class="btn btn-primary btn-sm"
-                      >
-                        <i class="bi bi-clipboard"></i>
-                      </button>
-                    </div>
-                  </h4>
-                  <div class="col-12">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Staked</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>Fully charged</th>
-                          <td>0 ctXYZ</td>
-                        </tr>
-                        <tr>
-                          <th>Partially charged</th>
-                          <td>0 ctXYZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
+        <h1 class="mb-4 col col-12"><b>Project token cards</b></h1>
+        <div
+          class="col col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
+        >
+          <div class="mb-4 card ct-card" style="cursor: pointer">
+            <img class="card-img-top thumbnail" />
+            <div class="p-4 liquid-token-card-body card-body">
+              <div class="align-items-center row">
+                <h4 class="text-center mb-3 col col-12">
+                  <div><b>Seed</b></div>
+                  <div>
+                    (Post-TGE)<button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                    >
+                      <i class="bi bi-clipboard"></i>
+                    </button>
                   </div>
-                  <div class="col-12">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Wallet</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td colspan="1">0 XYZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                </h4>
+                <div class="col col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Staked</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Fully charged</th>
+                        <td>0 ctXYZ</td>
+                      </tr>
+                      <tr>
+                        <th>Partially charged</th>
+                        <td>0 ctXYZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Wallet</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="1">0 XYZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
-          >
-            <div class="mb-4 card ct-card" style="cursor: pointer">
-              <img class="card-img-top thumbnail" />
-              <div class="p-4 liquid-token-card-body card-body">
-                <div class="align-items-center row">
-                  <h4 class="text-center mb-3 col-12">
-                    <div><b>Private sale</b></div>
-                    <div>
-                      (Post-TGE)<button
-                        type="button"
-                        class="btn btn-primary btn-sm"
-                      >
-                        <i class="bi bi-clipboard"></i>
-                      </button>
-                    </div>
-                  </h4>
-                  <div class="col-12">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Staked</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>Fully charged</th>
-                          <td>0 ctXYZ</td>
-                        </tr>
-                        <tr>
-                          <th>Partially charged</th>
-                          <td>0 ctXYZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
+        </div>
+        <div
+          class="col col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
+        >
+          <div class="mb-4 card ct-card" style="cursor: pointer">
+            <img class="card-img-top thumbnail" />
+            <div class="p-4 liquid-token-card-body card-body">
+              <div class="align-items-center row">
+                <h4 class="text-center mb-3 col col-12">
+                  <div><b>Private sale</b></div>
+                  <div>
+                    (Post-TGE)<button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                    >
+                      <i class="bi bi-clipboard"></i>
+                    </button>
                   </div>
-                  <div class="col-12">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Wallet</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td colspan="1">0 XYZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                </h4>
+                <div class="col col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Staked</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Fully charged</th>
+                        <td>0 ctXYZ</td>
+                      </tr>
+                      <tr>
+                        <th>Partially charged</th>
+                        <td>0 ctXYZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Wallet</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="1">0 XYZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
-          >
-            <div class="mb-4 card ct-card" style="cursor: pointer">
-              <img class="card-img-top thumbnail" />
-              <div class="p-4 liquid-token-card-body card-body">
-                <div class="align-items-center row">
-                  <h4 class="text-center mb-3 col-12">
-                    <div><b>Public sale</b></div>
-                    <div>
-                      (Pre-TGE)<button
-                        type="button"
-                        class="btn btn-primary btn-sm"
-                      >
-                        <i class="bi bi-clipboard"></i>
-                      </button>
-                    </div>
-                  </h4>
-                  <div class="col-12">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Staked</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>Fully charged</th>
-                          <td>0 ctXYZ</td>
-                        </tr>
-                        <tr>
-                          <th>Partially charged</th>
-                          <td>0 ctXYZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
+        </div>
+        <div
+          class="col col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 offset-lg-0 offset-md-2"
+        >
+          <div class="mb-4 card ct-card" style="cursor: pointer">
+            <img class="card-img-top thumbnail" />
+            <div class="p-4 liquid-token-card-body card-body">
+              <div class="align-items-center row">
+                <h4 class="text-center mb-3 col col-12">
+                  <div><b>Public sale</b></div>
+                  <div>
+                    (Pre-TGE)<button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                    >
+                      <i class="bi bi-clipboard"></i>
+                    </button>
                   </div>
-                  <div class="col-12">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Wallet</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td colspan="1">0 XYZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                </h4>
+                <div class="col col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Staked</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Fully charged</th>
+                        <td>0 ctXYZ</td>
+                      </tr>
+                      <tr>
+                        <th>Partially charged</th>
+                        <td>0 ctXYZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Wallet</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="1">0 XYZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -223,8 +293,633 @@
       </div>
     </div>
 
+    <div class="pb-5 pe-5 ps-5 container text-center">
+      <div class="row">
+        <h1 class="col col-12 mb-5 mt-5"><b>Tabs navigation</b></h1>
+        <ul class="mb-4 nav nav-pills col col-12" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              type="button"
+              id="react-aria9966808898-3-tab-schedule"
+              role="tab"
+              data-rr-ui-event-key="schedule"
+              aria-controls="react-aria9966808898-3-tabpane-schedule"
+              aria-selected="true"
+              class="nav-link active"
+            >
+              Vesting &amp; Claim
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              type="button"
+              id="react-aria9966808898-3-tab-distribution"
+              role="tab"
+              data-rr-ui-event-key="distribution"
+              aria-controls="react-aria9966808898-3-tabpane-distribution"
+              aria-selected="false"
+              tabindex="-1"
+              class="nav-link"
+            >
+              Token distribution
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              type="button"
+              id="react-aria9966808898-3-tab-feesAndRewards"
+              role="tab"
+              data-rr-ui-event-key="feesAndRewards"
+              aria-controls="react-aria9966808898-3-tabpane-feesAndRewards"
+              aria-selected="false"
+              tabindex="-1"
+              class="nav-link"
+            >
+              Fees &amp; rewards
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pb-5 pe-5 ps-5 container text-center">
+      <div class="row">
+        <h1 class="col col-12 mb-5 mt-5"><b>Cards display</b></h1>
+
+        <div class="col col-12">
+          <div class="card">
+            <h5 class="text-center card-header">Vesting schedule</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="text-end col col-6">
+                  <p><b>Launch (TGE) :</b></p>
+                  <p><b>Tokens unlocked at TGE :</b></p>
+                  <p><b>Linear vesting start : </b></p>
+                  <p><b>Vesting end :</b></p>
+                </div>
+                <div class="text-start col col-6">
+                  <p><span>10/02/2023 15:58</span></p>
+                  <p><b>8.00 %</b></p>
+                  <p><span>11/05/2023 16:58</span></p>
+                  <p><span>10/05/2024 16:58</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 col col-6 offset-3">
+          <div class="card">
+            <div class="text-center card-body">
+              <h4>Current rewards : 0 pCDK</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pb-5 pe-5 ps-5 container text-center">
+      <div class="row">
+        <h1 class="col col-12 mb-5 mt-5"><b>Form inputs</b></h1>
+
+        <div class="col col-6 offset-3">
+          <div class="d-grid gap-2">
+            <div class="input-group has-validation">
+              <span class="input-group-text">ctXYZ</span
+              ><input
+                name="amount"
+                placeholder="Amount to withdraw"
+                class="text-end false form-control"
+                value=""
+              /><button type="button" class="btn btn-light">Max</button
+              ><button
+                type="button"
+                disabled=""
+                class="btn btn-primary"
+                style="min-width: 7rem"
+              >
+                Withdraw
+              </button>
+            </div>
+
+            <div class="input-group has-validation">
+              <span class="input-group-text">TST1</span
+              ><input
+                name="rewards"
+                class="text-end false form-control"
+                value=""
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                name="newValue"
+                placeholder="Fee percentage (1 digit)"
+                class="text-end is-valid form-control"
+                value="0"
+              /><button type="button" class="btn btn-primary btn-sm">
+                <i class="bi bi-check-lg"></i> Save</button
+              ><button type="button" class="btn btn-secondary btn-sm">
+                <i class="bi bi-x-lg"></i> Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pb-5 pe-5 ps-5 container text-center">
+      <div class="row">
+        <h1 class="col col-12 mb-5 mt-5"><b>Modals</b></h1>
+        <button
+          type="button"
+          class="btn btn-primary col col-6 offset-3"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Show demo modal
+        </button>
+      </div>
+
+      <div
+        id="exampleModal"
+        class="fade modal"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div id="exampleModalLabel" class="modal-title h4">
+                New Staking Campaign
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form novalidate="" class="needs-validation d-grid gap-2">
+                <div class="row">
+                  <div class="col col-6">
+                    <div>
+                      <label class="form-label">Start date</label>
+                      <div class="rdt dark">
+                        <input
+                          type="text"
+                          class="text-end form-control has-validation false"
+                          id="startDate"
+                          name="startDate"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <div class="rdtPicker">
+                          <div class="rdtDays">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th class="rdtPrev"><span>‹</span></th>
+                                  <th
+                                    class="rdtSwitch"
+                                    colspan="5"
+                                    data-value="1"
+                                  >
+                                    février 2024
+                                  </th>
+                                  <th class="rdtNext"><span>›</span></th>
+                                </tr>
+                                <tr>
+                                  <th class="dow">lu</th>
+                                  <th class="dow">ma</th>
+                                  <th class="dow">me</th>
+                                  <th class="dow">je</th>
+                                  <th class="dow">ve</th>
+                                  <th class="dow">sa</th>
+                                  <th class="dow">di</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td
+                                    data-value="29"
+                                    data-month="0"
+                                    data-year="2024"
+                                    class="rdtDay rdtOld rdtDisabled"
+                                  >
+                                    29
+                                  </td>
+                                  <td
+                                    data-value="30"
+                                    data-month="0"
+                                    data-year="2024"
+                                    class="rdtDay rdtOld rdtDisabled"
+                                  >
+                                    30
+                                  </td>
+                                  <td
+                                    data-value="31"
+                                    data-month="0"
+                                    data-year="2024"
+                                    class="rdtDay rdtOld rdtDisabled"
+                                  >
+                                    31
+                                  </td>
+                                  <td
+                                    data-value="1"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay rdtToday"
+                                  >
+                                    1
+                                  </td>
+                                  <td
+                                    data-value="2"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    2
+                                  </td>
+                                  <td
+                                    data-value="3"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    3
+                                  </td>
+                                  <td
+                                    data-value="4"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    4
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    data-value="5"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    5
+                                  </td>
+                                  <td
+                                    data-value="6"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    6
+                                  </td>
+                                  <td
+                                    data-value="7"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    7
+                                  </td>
+                                  <td
+                                    data-value="8"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    8
+                                  </td>
+                                  <td
+                                    data-value="9"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    9
+                                  </td>
+                                  <td
+                                    data-value="10"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    10
+                                  </td>
+                                  <td
+                                    data-value="11"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    11
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    data-value="12"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    12
+                                  </td>
+                                  <td
+                                    data-value="13"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    13
+                                  </td>
+                                  <td
+                                    data-value="14"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    14
+                                  </td>
+                                  <td
+                                    data-value="15"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    15
+                                  </td>
+                                  <td
+                                    data-value="16"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    16
+                                  </td>
+                                  <td
+                                    data-value="17"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    17
+                                  </td>
+                                  <td
+                                    data-value="18"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    18
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    data-value="19"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    19
+                                  </td>
+                                  <td
+                                    data-value="20"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    20
+                                  </td>
+                                  <td
+                                    data-value="21"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    21
+                                  </td>
+                                  <td
+                                    data-value="22"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    22
+                                  </td>
+                                  <td
+                                    data-value="23"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    23
+                                  </td>
+                                  <td
+                                    data-value="24"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    24
+                                  </td>
+                                  <td
+                                    data-value="25"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    25
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    data-value="26"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    26
+                                  </td>
+                                  <td
+                                    data-value="27"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    27
+                                  </td>
+                                  <td
+                                    data-value="28"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    28
+                                  </td>
+                                  <td
+                                    data-value="29"
+                                    data-month="1"
+                                    data-year="2024"
+                                    class="rdtDay"
+                                  >
+                                    29
+                                  </td>
+                                  <td
+                                    data-value="1"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    1
+                                  </td>
+                                  <td
+                                    data-value="2"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    2
+                                  </td>
+                                  <td
+                                    data-value="3"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    3
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    data-value="4"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    4
+                                  </td>
+                                  <td
+                                    data-value="5"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    5
+                                  </td>
+                                  <td
+                                    data-value="6"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    6
+                                  </td>
+                                  <td
+                                    data-value="7"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    7
+                                  </td>
+                                  <td
+                                    data-value="8"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    8
+                                  </td>
+                                  <td
+                                    data-value="9"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    9
+                                  </td>
+                                  <td
+                                    data-value="10"
+                                    data-month="2"
+                                    data-year="2024"
+                                    class="rdtDay rdtNew"
+                                  >
+                                    10
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td colspan="7" class="rdtTimeToggle">
+                                    00:00
+                                  </td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-6">
+                    <div>
+                      <label class="form-label">Duration (days)</label>
+                      <div class="input-group">
+                        <input
+                          name="duration"
+                          class="text-end false form-control"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label">Total campain rewards</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">TST1</span
+                    ><input
+                      name="rewards"
+                      class="text-end false form-control"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <p>Maximum campaign rewards : 1,000,000 TST1</p>
+                <p>Maximum APR : 1000000.00 %</p>
+                <p><span class="is-invalid">Projected APR : 0.00 %</span></p>
+                <button
+                  type="button"
+                  class="btn btn-lg btn-primary mt-3"
+                  disabled
+                >
+                  Create
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary fixed-bottom">
+      <div class="container">
+        <div class="text-center col-4 offset-4">
+          <a
+            href="https://www.yz-network.com"
+            target="_blank"
+            class="footer-brand navbar-brand"
+            >Powered by <img src="../dist/brand/default.png" class="logo"
+          /></a>
+        </div>
+      </div>
+    </nav>
+
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./themes-config.js"></script>
     <script src="./theme-switcher.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
