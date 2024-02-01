@@ -21,6 +21,14 @@ function getThemeId() {
   return entry.dir || entry.name;
 }
 
+function getThemeThumbnails() {
+  const entry = getThemeEntry();
+
+  if (!entry || entry.thumbnails !== true || !entry.project) return "default";
+
+  return entry.project;
+}
+
 function getThemeBrand() {
   const entry = getThemeEntry();
 
@@ -87,6 +95,11 @@ function applyTheme(theme) {
   $(".navbar-brand").append(
     `<img src="../dist/brand/${getThemeBrand()}.png" alt="Brand" class="logo" />`
   );
+
+  console.log("Setting thumbnails");
+
+  const thumbnail = getThemeThumbnails();
+  $(".thumbnail").attr("src", `../dist/thumbnails/${thumbnail}.jpg`);
 
   console.log("Theme applied !");
 }
