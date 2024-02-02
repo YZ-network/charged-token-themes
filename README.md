@@ -2,6 +2,23 @@
 
 This repository holds all themes used by the Charged Token dApp. Its aim is to allow collaborative working with projects who wish to have their own custom application rendering.
 
+# Table of Contents
+
+- [charged-token-themes](#charged-token-themes)
+- [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Adding a new theme](#adding-a-new-theme)
+    - [Theme configuration](#theme-configuration)
+    - [Default theme overrides](#default-theme-overrides)
+    - [Building a theme](#building-a-theme)
+    - [Testing](#testing)
+    - [Auto build during development](#auto-build-during-development)
+  - [HOWTO customize more](#howto-customize-more)
+    - [Favicon](#favicon)
+    - [Brand logo](#brand-logo)
+    - [Charged Tokens Thumbnails](#charged-tokens-thumbnails)
+    - [Fonts](#fonts)
+
 ## Overview
 
 Each theme is composed of :
@@ -101,7 +118,7 @@ The icon must either be a standard `.ico` file or a PNG file with the `.ico` ext
 
 After that, you just have to set the `favicon` property of your theme configuration to true.
 
-### Brand image
+### Brand logo
 
 The brand image lives in the application navbar. Hence, its height is limited to 32px.
 The width is not fixed but you should limit it to 150px wide maximum.
