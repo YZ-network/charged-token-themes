@@ -2,7 +2,9 @@
   "name": "charged-token-themes",
   "version": "1.0.0",
   "description": "Bootstrap themes library to be used by the Charged Token dApp",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
+  "typings": "src/index.d.ts",
   "scripts": {
     "lint": "stylelint scss/",
     "watch": "sass --load-path=node_modules/ --watch scss/yz/app.scss:dist/yz.css --watch scss/cdk/app.scss:dist/cdk.css --watch scss/default/app.scss:dist/default.css",
@@ -12,6 +14,7 @@
     "theme:yz": "sass --load-path=node_modules/ scss/yz/app.scss dist/yz.css",
     "theme:cdk": "sass --load-path=node_modules/ scss/cdk/app.scss dist/cdk.css && cross-env cp -r scss/cdk/fonts/* dist/fonts/",
     "build": "cross-env rm -rf dist && cross-env mkdir dist && npm run theme:assets && npm run theme:icons && npm run theme:default && npm run theme:yz && npm run theme:cdk",
+    "serve": "live-server",
     "test": "npm run lint"
   },
   "repository": {
@@ -30,7 +33,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "jquery": "^3.7.1",
+    "live-server": "^1.2.2",
     "postcss": "=8.3.9",
     "postcss-cli": "=9.0.1",
     "purgecss": "=4.0.3",

@@ -6,6 +6,7 @@ This repository holds all themes used by the Charged Token dApp. Its aim is to a
 
 - [charged-token-themes](#charged-token-themes)
 - [Table of Contents](#table-of-contents)
+  - [Initialization](#initialization)
   - [Overview](#overview)
   - [Adding a new theme](#adding-a-new-theme)
     - [Theme configuration](#theme-configuration)
@@ -19,6 +20,10 @@ This repository holds all themes used by the Charged Token dApp. Its aim is to a
     - [Charged Tokens Thumbnails](#charged-tokens-thumbnails)
     - [Fonts](#fonts)
 
+## Initialization
+
+Before anything, make sure to install the project dependencies by running the `npm install` command.
+
 ## Overview
 
 Each theme is composed of :
@@ -31,9 +36,11 @@ It is identified by its name, let's say "project-id". Whenever the dApp is acces
 
 ## Adding a new theme
 
+The dApp uses [Bootstrap 5.2.3](https://getbootstrap.com/docs/5.2/getting-started/introduction/). A complete guide for Bootstrap customization is available [here](https://getbootstrap.com/docs/5.2/customize/overview/).
+
 ### Theme configuration
 
-First of all, you must add a new JSON configuration in the `THEMES` array located in the `demo/themes-config.js` script.
+First of all, you must add a new JSON configuration in the `THEMES` array located at the top of the `src/index.js` script.
 
 Here is the minimal JSON Theme configuration needed :
 
@@ -58,12 +65,11 @@ There are several other optional properties to help choose the level of customiz
 | thumbnails | optional | set to true if the theme provides a custom thumbnail for rounds cards header                  |
 | brand      | optional | set to true if the theme provides a custom brand logo                                         |
 | favicon    | optional | set to true if the theme provides a custom favicon                                            |
+| dark       | optional | set to true to tell the dApp it is running in dark mode, defaults to false                    |
 
 ### Default theme overrides
 
 Once the theme configuration has been added, create the corresponding directory to hold the scss stylesheets named `scss/project-id` and create the entrypoint `app.scss` in it.
-
-The dApp uses [Bootstrap 5.2.3](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
 Every custom `app.scss` must contain at least the following :
 
@@ -94,9 +100,9 @@ Once done, you will be able to build your theme using the command `npm run theme
 
 ### Testing
 
-To see how your new theme renders, you can use the `demo/index.html` page. It picks the theme configuration to create a theme selection list in the right hand of the navbar.
+To see how your new theme renders, you can spin up an HTTP server with the `npm run serve` command. This basically serves the `index.html` page and dependencies without CORS issues.
 
-This demo page lists all of the bootstrap components used in the dApp so you can get a quick idea of the final rendering.
+The demo page picks the theme configuration to create a theme selection list in the right hand of the navbar, but also provides examples for all of the bootstrap components used in the dApp so you can get a quick idea of the final rendering.
 
 ### Auto build during development
 

@@ -1028,9 +1028,15 @@
       </div>
     </nav>
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./themes-config.js"></script>
-    <script src="./theme-switcher.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./src/index.js"></script>
+    <script>
+      <!--
+      $(function () {
+        window.initThemes(false);
+      });
+      -->
+    </script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
