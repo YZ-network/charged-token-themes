@@ -141,10 +141,10 @@ function applyTheme(theme, setThumbnails) {
   $('link.theme[rel="stylesheet"]').remove();
 
   $("head").append(
-    `<link rel="icon" class="theme" href="./dist/favicon/${favicon}.ico" />`
+    `<link rel="icon" class="theme" href="/dist/favicon/${favicon}.ico" />`
   );
   $("head").append(
-    `<link rel="stylesheet" type="text/css" class="theme" href="./dist/${themeId}.css" />`
+    `<link rel="stylesheet" type="text/css" class="theme" href="/dist/${themeId}.css" />`
   );
 
   // Setting brand
@@ -154,14 +154,14 @@ function applyTheme(theme, setThumbnails) {
 
   $(".navbar-brand.top").empty();
   $(".navbar-brand.top").append(
-    `<img src="./dist/brand/${getThemeBrand()}.png" alt="Brand" class="logo" />`
+    `<img src="/dist/brand/${getThemeBrand()}.png" alt="Brand" class="logo" />`
   );
 
   if (setThumbnails === true) {
     // Setting thumbnails
 
     const thumbnail = getThemeThumbnails();
-    $(".thumbnail").attr("src", `./dist/thumbnails/${thumbnail}.jpg`);
+    $(".thumbnail").attr("src", `/dist/thumbnails/${thumbnail}.jpg`);
   }
 }
 
