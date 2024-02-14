@@ -5,6 +5,7 @@ declare module "charged-token-themes" {
     uri: string;
     title: string;
     project?: string;
+    filterProject?: boolean;
     brand?: boolean;
     favicon?: boolean;
     thumbnails?: boolean;
@@ -23,4 +24,5 @@ declare module "charged-token-themes" {
   export function getThemeBrand(): string;
   export function isThemeDark(): boolean;
   export function getThemeProject(): string | undefined;
+  export function isThemeProjectFiltered(): boolean;
 }

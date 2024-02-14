@@ -55,17 +55,18 @@ Here is the minimal JSON Theme configuration needed :
 
 There are several other optional properties to help choose the level of customization :
 
-| Property   | Status   | Description                                                                                   |
-| ---------- | -------- | --------------------------------------------------------------------------------------------- |
-| name       | required | unique identifier, all lowercase without spaces or special chars except dashes or underscores |
-| hostname   | required | unique hostname that will trigger this theme                                                  |
-| uri        | required | URI to link to when clicking on the navbar brand logo                                         |
-| title      | required | dApp page title to use                                                                        |
-| project    | optional | project name as used for the whitelisting, required if you use custom thumbnails              |
-| thumbnails | optional | set to true if the theme provides a custom thumbnail for rounds cards header                  |
-| brand      | optional | set to true if the theme provides a custom brand logo                                         |
-| favicon    | optional | set to true if the theme provides a custom favicon                                            |
-| dark       | optional | set to true to tell the dApp it is running in dark mode, defaults to false                    |
+| Property      | Status   | Description                                                                                                                                            |
+| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| name          | required | unique identifier, all lowercase without spaces or special chars except dashes or underscores                                                          |
+| hostname      | required | unique hostname that will trigger this theme                                                                                                           |
+| uri           | required | URI to link to when clicking on the navbar brand logo                                                                                                  |
+| title         | required | dApp page title to use                                                                                                                                 |
+| project       | optional | project name as used for the whitelisting, required if you use custom thumbnails                                                                       |
+| filterProject | optional | when using a custom URL, set to true if you want to show only the project charged tokens. Otherwise, charged tokens from any project will be displayed |
+| thumbnails    | optional | set to true if the theme provides a custom thumbnail for rounds cards header                                                                           |
+| brand         | optional | set to true if the theme provides a custom brand logo                                                                                                  |
+| favicon       | optional | set to true if the theme provides a custom favicon                                                                                                     |
+| dark          | optional | set to true to tell the dApp it is running in dark mode, defaults to false                                                                             |
 
 ### Default theme overrides
 

@@ -29,6 +29,7 @@ const THEMES = [
     uri: "https://cdktoken.io",
     title: "CDK Token",
     project: "CDK",
+    filterProject: true,
     brand: true,
     favicon: true,
     thumbnails: true,
@@ -117,12 +118,14 @@ function getThemeProject() {
   return entry.project;
 }
 
-function getThemeFavicon() {
+function isThemeProjectFiltered() {
   const entry = getThemeEntry();
 
-  if (!entry || entry.favicon !== true) return "default";
-
-  return entry.name;
+  return (
+    entry !== undefined &&
+    entry.project !== undefined &&
+    entry.filterProject === true
+  );
 }
 
 function applyTheme(theme, setThumbnails) {
@@ -211,5 +214,6 @@ export {
   getThemeThumbnailsList,
   initThemes,
   isThemeDark,
+  isThemeProjectFiltered,
   setCurrentTheme,
 };
