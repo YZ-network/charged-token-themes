@@ -118,6 +118,14 @@ function getThemeProject() {
   return entry.project;
 }
 
+function getThemeFavicon() {
+  const entry = getThemeEntry();
+
+  if (!entry || entry.favicon !== true) return "default";
+
+  return entry.name;
+}
+
 function isThemeProjectFiltered() {
   const entry = getThemeEntry();
 
