@@ -34,6 +34,15 @@ const THEMES = [
     favicon: true,
     thumbnails: true,
   },
+  {
+    name: "crypto-xyz",
+    hostname: "test.app.yz-network.com",
+    uri: "https://test.app.yz-network.com",
+    dark: true,
+    dir: "yz",
+    project: "Crypto XYZ",
+    thumbnails: true,
+  },
 ];
 
 /***** DO NOT CHANGE ANY OF THE FOLLOWING ***/
@@ -179,6 +188,8 @@ function applyTheme(theme, setThumbnails) {
 function initThemeSwitcher() {
   const themesList = getThemeList();
   const currentTheme = getCurrentTheme();
+
+  console.log("themes list :", themesList);
 
   themesList.forEach((theme) =>
     $("#theme-switcher").append(
